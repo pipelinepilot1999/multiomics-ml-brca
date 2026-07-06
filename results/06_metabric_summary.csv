@@ -1,0 +1,7 @@
+,0
+metabric_n,1903.0
+metabric_events,359.0
+metabric_event_rate,0.189
+shared_genes,16771.0
+auroc,0.5531
+auprc,0.2175

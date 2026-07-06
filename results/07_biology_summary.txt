@@ -1,0 +1,9 @@
+=== BIOLOGY SANITY CHECK ===
+expr: 40 selected genes; top: OR4D1, LOC100128640, AMTN, CHST13, BTNL3, LOC127841, PPFIA3, SPINT1, WNT5B, CYP3A4, LACRT, MAP2K6
+meth: 43 genes across selected probes; top probe genes: PLEKHA6,RP11-739N20.2, LDLRAD4, CPED1, SLC12A5, GS1-72M22.1,NEFM,RP11-624C23.1, FMNL1,CTD-2020K17.3, SOX18,TCEA2,ZNF512B, PITX2, PITX2, ERICH1
+
+known-BRCA-loci hit by EXPRESSION selection: none
+known-BRCA-loci hit by METHYLATION selection: ['PITX2']
+
+genes selected by BOTH layers (concordant): none
+interpretation: little/no gene overlap -> layers point at different biology (consistent with methylation carrying orthogonal signal, even if it did not translate into a clear AUROC gain in stage 04).

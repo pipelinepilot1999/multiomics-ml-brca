@@ -1,0 +1,5 @@
+# large raw data / caches — not versioned
+data/raw/
+data/processed/*.npz
+__pycache__/
+*.pyc

@@ -1,0 +1,5 @@
+horizon_yr,at_risk_at_N,positives,negatives,neg_eventfree,neg_late_event,dropped_ambiguous,usable_N,event_rate,km_surv_at_N
+2,579,62,579,496,83,455,641,0.097,0.929
+3,418,89,418,362,56,589,507,0.176,0.88
+4,307,107,306,268,38,683,413,0.259,0.837
+5,225,123,225,203,22,748,348,0.353,0.787
