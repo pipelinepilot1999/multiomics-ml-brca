@@ -1,0 +1,12 @@
+name: brca-surv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=2.4
+  - pandas=2.3
+  - scikit-learn=1.7
+  - lifelines=0.30
+  - matplotlib=3.11
+  - joblib
+  - pip

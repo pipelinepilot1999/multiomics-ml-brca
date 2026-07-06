@@ -14,7 +14,9 @@ not strong enough to help prediction here. The result is the measurement, not th
   dropped as ambiguous). Median PFI follow-up ~2.1 yr — the reason for fixed-horizon binary.
 - Horizon N=3yr chosen from the KM at-risk table (`results/01_horizon_table.csv`): N=2 too
   few events (62, 9.7%); N=5 drops 68% of patients to censoring. N=3 balances events (89
-  pre-methylation) against selection bias. See `fig_km_horizon.png`.
+  pre-methylation) against selection bias.
+
+![KM horizon justification](results/fig_km_horizon.png)
 
 ## Regime comparison (identical 5-fold splits, mean ± std)
 | Regime | AUROC | AUPRC (baseline 0.185) |
@@ -28,8 +30,9 @@ not strong enough to help prediction here. The result is the measurement, not th
 | early_lasso | 0.583 ± 0.078 | 0.288 ± 0.043 |
 
 All regimes cluster in AUROC 0.58–0.65 with fold std ~0.08–0.10 — i.e. the differences
-between regimes are **within fold-to-fold noise**. No regime dominates. (See
-`fig_regime_metrics.png`.)
+between regimes are **within fold-to-fold noise**. No regime dominates.
+
+![Regime metrics](results/fig_regime_metrics.png)
 
 ## Late-fusion meta-learner — the betas ARE the result
 `p_final = σ(-1.95 + 0.79·p_expr + 0.70·p_meth)`
@@ -50,7 +53,9 @@ The null centres at ~0.49 for both (labels shuffled ⇒ chance ranking), confirm
 is calibrated. Expression clears the floor (p=0.024); **late fusion does not (p=0.058), and
 its real AUROC sits below the null's 95th percentile.** Adding methylation moved the model
 *toward* the noise floor, not away from it. Shuffle wrapped the entire supervised pipeline
-including feature selection. See `fig_permutation.png`.
+including feature selection.
+
+![Permutation noise floor](results/fig_permutation.png)
 
 ## External validation — expression arm on METABRIC (scope-bounded)
 - METABRIC: 1,903 patients, 359 relapse events (18.9%, matches TCGA's 18.5%), 16,771 shared

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite it as below."
+title: "multiomics-ml-brca: leak-free late-fusion comparison for BRCA relapse"
+authors:
+  - alias: pipelinepilot1999
+date-released: 2026-07-06
+license: MIT
+abstract: >
+  A leak-free, identical-fold comparison testing whether DNA methylation adds
+  predictive signal beyond gene expression for 3-year relapse (PFI) in TCGA-BRCA,
+  validated against a 1000x full-pipeline permutation noise floor and external
+  validation of the expression arm on METABRIC.
+references:
+  - type: article
+    authors: [{family-names: Liu, given-names: Jianfang}]
+    title: "An Integrated TCGA Pan-Cancer Clinical Data Resource"
+    journal: Cell
+    year: 2018
+    doi: 10.1016/j.cell.2018.02.052
+  - type: article
+    authors: [{family-names: Ojala, given-names: Markus}, {family-names: Garriga, given-names: Gemma}]
+    title: "Permutation Tests for Studying Classifier Performance"
+    journal: JMLR
+    year: 2010
+  - type: article
+    authors: [{family-names: Phipson, given-names: Belinda}, {family-names: Smyth, given-names: Gordon}]
+    title: "Permutation p-values should never be zero"
+    journal: Statistical Applications in Genetics and Molecular Biology
+    year: 2010

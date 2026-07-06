@@ -38,6 +38,7 @@ detect whether methylation helps — and to trust a null if that is what the dat
 ## Pipeline
 | stage | script | output |
 |---|---|---|
+| 00 | `00_download_data.sh` | raw TCGA-BRCA (Xena) + METABRIC (cBioPortal) inputs |
 | 01 | `01_label_horizon.py` | KM at-risk table -> horizon N decision |
 | 02 | `02_qc_intersect_label.py` | sample QC, layer intersection, N=3yr label, `manifest.csv` |
 | 03 | `03_extract_matrices.py` | aligned float32 `expr.npz` / `meth.npz` (label-blind preprocessing) |
@@ -55,7 +56,9 @@ detect whether methylation helps — and to trust a null if that is what the dat
 
 ## Run
 ```bash
+conda env create -f env/environment.yml   # first time
 conda activate brca-surv
+bash scripts/00_download_data.sh           # ~1.5 GB raw inputs
 python scripts/01_label_horizon.py
 python scripts/02_qc_intersect_label.py
 python scripts/03_extract_matrices.py
